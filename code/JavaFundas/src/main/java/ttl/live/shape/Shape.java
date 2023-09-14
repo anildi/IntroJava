@@ -5,10 +5,37 @@ package ttl.live.shape;
  */
 public class Shape {
 
+    private final static String defaultColor = "Black";
+    private final static int defaultLineThickness = 1;
     private int x;
     private int y;
-    private String color;
-    private int lineThickness = 1;
+    private String color = defaultColor;
+    private int lineThickness = defaultLineThickness;
+
+    public Shape(int x, int y) {
+        this(x, y, defaultColor, defaultLineThickness);
+//        this.x = x;
+//        this.y = y;
+
+//        complicatedStuff();
+    }
+
+    public Shape(int x, int y, String color, int lineThickness) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+//        this.lineThickness = lineThickness;
+        setLineThickness(lineThickness);
+
+        complicatedStuff();
+    }
+
+//    public Shape() {}
+
+    public void complicatedStuff() {
+        //Do some other complicated calculation.
+    }
+
 
     public int getX() {
         return x;
