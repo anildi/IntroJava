@@ -7,6 +7,13 @@ public class Shape {
 
     private final static String defaultColor = "Black";
     private final static int defaultLineThickness = 1;
+
+    private static int count;
+
+    public static int getCount() {
+        return count;
+    }
+
     private int x1;
     private int y1;
     private int x2;
@@ -30,6 +37,8 @@ public class Shape {
         this.color = color;
 //        this.lineThickness = lineThickness;
         setLineThickness(lineThickness);
+
+        count++;
 
         complicatedStuff();
     }
@@ -90,6 +99,7 @@ public class Shape {
             this.lineThickness = lineThickness;
         }
     }
+
 
     public void draw() {
         System.out.printf("In Shape::draw, x1: %d, y1: %d, x2: %d, y2: %d\n", x1, y1, x2, y2);

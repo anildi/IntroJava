@@ -13,11 +13,11 @@ public class TestStudent {
 
     @Test
     public void testStudent() {
-        Student student = new Student();
-        student.setFirstName("Joe");
-        student.setLastName("Smith");
-        student.setDob(LocalDate.of(1986, 10, 10));
-        student.setStatus("FullTime");
+        Student student = new Student("Joe", "Smith", LocalDate.of(1986, 10, 10), "FullTime");
+//        student.setFirstName("Joe");
+//        student.setLastName("Smith");
+//        student.setDob(LocalDate.of(1986, 10, 10));
+//        student.setStatus("FullTime");
 
         System.out.println(
                  "name: " + student.getFirstName() +
@@ -30,14 +30,39 @@ public class TestStudent {
     }
 
     @Test
+    public void testStudentWithSmallConstructor() {
+        Student student = new Student("Joe", "Smith", LocalDate.of(1960, 10, 10));
+
+        assertEquals("FullTime", student.getStatus());
+    }
+
+    @Test
     public void testStudentWithBadDob() {
         assertThrows(RuntimeException.class, () -> {
-            Student student = new Student();
-            student.setFirstName("Joe");
-            student.setLastName("Smith");
-            student.setDob(LocalDate.now());
-            student.setStatus("FullTime");
+            Student student = new Student("Joe", "Smith", LocalDate.now(), "FullTime");
+//            student.setFirstName("Joe");
+//            student.setLastName("Smith");
+//            student.setDob(LocalDate.now());
+//            student.setStatus("FullTime");
 
         });
+    }
+
+    @Test
+    public void testIsActive() {
+        Student student = new Student("Joe", "Smith", LocalDate.of(1960, 10, 10));
+
+        boolean result = student.isActive();
+
+        assertTrue(result);
+    }
+
+    @Test
+    public void testGetCurrentInfo() {
+        Student student = new Student("Joe", "Smith", LocalDate.of(1960, 10, 10));
+
+        String result = student.getCurrentInfo();
+
+        assertTrue(result.contains("Joe, Smith"));
     }
 }

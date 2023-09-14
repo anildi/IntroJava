@@ -51,4 +51,27 @@ public class TestShapes {
         System.out.println("area: " + area);
         assertEquals(100.0, area);
     }
+
+    @Test
+    public void testCountInstances() {
+
+        int count = Shape.getCount();
+        System.out.println("first count: " + count);
+
+        Shape shape1 = new Shape(10, 10, 20, 20);
+
+        Shape shape2 = new Shape(40, 40, 60, 60);
+
+        count = Shape.getCount();
+
+        System.out.println("count: " + count);
+
+        assertEquals(2, count);
+    }
+
+    @Test
+    public void testMath() {
+        double result = Math.pow(3, 5);
+        System.out.println("result: " + result);
+    }
 }
