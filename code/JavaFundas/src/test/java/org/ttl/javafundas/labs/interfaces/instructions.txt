@@ -1,0 +1,18 @@
+Remember to do your work in the StudentWork module.
+Slightly different instructions for this one
+
+The premise of the lab is that you have to create an application
+that interacts with a collection of Sensors to collect data about the
+environment, e.g. a Temperature Sensor, a Humidity Sensor etc.
+Your application needs to periodically ask each of the sensors in
+it’s collection to take a reading.
+
+This will require the use of an Interface.
+
+Look in src/test/java/org/ttl/javafundas/labs/interfaces.
+
+The class RunInterfaceLab has a Junit test and some TODO
+instructions on what you need to do.
+
+Uncommenting the code will produce a bunch of errors which you
+will have to fix.
