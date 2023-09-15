@@ -1,4 +1,4 @@
-package ttl.labs.labfourab;
+package ttl.larku.domain;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -26,29 +26,15 @@ public class Student {
 
     private int id;
 
-    private static int nextId = 5;
-    /*
-    Provide a constructor that takes a first name, last name and
-date of birth as arguments, and another that takes
-arguments for all fields. Create any other constructors you
-think would be useful.
-     */
-
     public Student(String firstName, String lastName, LocalDate dob, Status status) {
         this.firstName = firstName;
         this.lastName = lastName;
         setDob(dob);
         this.status = status;
-
-        this.id = nextId++;
     }
 
     public Student(String firstName, String lastName, LocalDate dob) {
         this(firstName, lastName, dob, Status.FULLTIME);
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.dob = dob;
-//        this.status = "FullTime";
     }
 
     public int getId() {
@@ -103,29 +89,32 @@ lastname, firstname
     public String getFormalName() {
         return firstName + ", " + lastName;
     }
-    /*
-●
-Create a method called isActive that checks whether a
-student is active or not.
-returns true if the Status is Fulltime or Parttime
-●
-returns false if the Status is Hibernating
-●
-*/
 
     public boolean isActive() {
 //        if(status == "FullTime" || status == "Hibernating") {
-        if (status.equals("FullTime") || status.equals("Hibernating")) {
+        if (status == Status.FULLTIME || status == Status.PARTTIME) {
             return true;
         } else {
             return false;
         }
     }
-/*
-Create a method called getCurrentInfo that returns the
-formal name and whether the student is active or not.
-*/
+
+    /*
+    Create a method called getCurrentInfo that returns the
+    formal name and whether the student is active or not.
+    */
     public String getCurrentInfo() {
         return "id: " + id + ", " + getFormalName() + ", active: " + isActive();
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dob=" + dob +
+                ", status=" + status +
+                ", id=" + id +
+                '}';
     }
 }

@@ -13,7 +13,8 @@ public class TestStudent {
 
     @Test
     public void testStudent() {
-        Student student = new Student("Joe", "Smith", LocalDate.of(1986, 10, 10), "FullTime");
+        //Student student = new Student("Joe", "Smith", LocalDate.of(1986, 10, 10), "FullTime");
+        Student student = new Student("Joe", "Smith", LocalDate.of(1986, 10, 10), Student.Status.FULLTIME);
 //        student.setFirstName("Joe");
 //        student.setLastName("Smith");
 //        student.setDob(LocalDate.of(1986, 10, 10));
@@ -39,7 +40,7 @@ public class TestStudent {
     @Test
     public void testStudentWithBadDob() {
         assertThrows(RuntimeException.class, () -> {
-            Student student = new Student("Joe", "Smith", LocalDate.now(), "FullTime");
+            Student student = new Student("Joe", "Smith", LocalDate.now(), Student.Status.FULLTIME);
 //            student.setFirstName("Joe");
 //            student.setLastName("Smith");
 //            student.setDob(LocalDate.now());
