@@ -11,7 +11,7 @@ public class TestShapes {
 
     @Test
     public void testBasicShape() {
-        Shape shape1 = new Shape(10, 10, 20, 20, "Red", -100);
+        OldShape shape1 = new OldShape(10, 10, 20, 20, "Red", -100);
 //        shape1.setX(10);
 ////        shape1.setY(10);
 //        shape1.setColor("Red");
@@ -23,9 +23,9 @@ public class TestShapes {
 
     @Test
     public void testShapeConstructors() {
-        Shape shape1 = new Shape(10, 10, 20, 20, "Red", -100);
+        OldShape shape1 = new OldShape(10, 10, 20, 20, "Red", -100);
 
-        Shape shape2 = new Shape(10, 10, 20, 20 );
+        OldShape shape2 = new OldShape(10, 10, 20, 20 );
 //        shape1.setX(10);
 ////        shape1.setY(10);
 //        shape1.setColor("Red");
@@ -39,9 +39,9 @@ public class TestShapes {
 
     @Test
     public void testBehaviours() {
-        Shape shape1 = new Shape(10, 10, 20, 20);
+        OldShape shape1 = new OldShape(10, 10, 20, 20);
 
-        Shape shape2 = new Shape(40, 40, 60, 60);
+        OldShape shape2 = new OldShape(40, 40, 60, 60);
 
 
         double area = shape1.getArea();
@@ -55,14 +55,14 @@ public class TestShapes {
     @Test
     public void testCountInstances() {
 
-        int count = Shape.getCount();
+        int count = OldShape.getCount();
         System.out.println("first count: " + count);
 
-        Shape shape1 = new Shape(10, 10, 20, 20);
+        OldShape shape1 = new OldShape(10, 10, 20, 20);
 
-        Shape shape2 = new Shape(40, 40, 60, 60);
+        OldShape shape2 = new OldShape(40, 40, 60, 60);
 
-        count = Shape.getCount();
+        count = OldShape.getCount();
 
         System.out.println("count: " + count);
 

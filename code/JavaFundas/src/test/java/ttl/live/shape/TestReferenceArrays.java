@@ -9,16 +9,16 @@ public class TestReferenceArrays {
 
     @Test
     public void testArrayOfShapes() {
-        Shape[] shapes = new Shape[3];
+        OldShape[] shapes = new OldShape[3];
 
-        shapes[0] = new Shape(10, 10, 20, 20);
-        shapes[1] = new Shape(30, 10, 50, 20);
-        shapes[2] = new Shape(54, 10, 74, 20);
+        shapes[0] = new OldShape(10, 10, 20, 20);
+        shapes[1] = new OldShape(30, 10, 50, 20);
+        shapes[2] = new OldShape(54, 10, 74, 20);
 
-        Shape[] shapes2 = {
-                new Shape(10, 10, 20, 20),
-                new Shape(30, 10, 50, 20),
-                new Shape(54, 10, 74, 20)
+        OldShape[] shapes2 = {
+                new OldShape(10, 10, 20, 20),
+                new OldShape(30, 10, 50, 20),
+                new OldShape(54, 10, 74, 20)
         };
 
         for (int i = 0; i < shapes.length; i++) {

@@ -26,9 +26,14 @@ private variables
 getters and setters
      */
 
+    public final static String FULL_TIME = "Fulltime";
+    public final static String PART_TIME = "Parttime";
+    public final static String HIBERNATING = "Hibernating";
+
     private String firstName;
     private String lastName;
     private LocalDate dob;
+
     private String status;
 
     private int id;
@@ -51,7 +56,8 @@ think would be useful.
     }
 
     public Student(String firstName, String lastName, LocalDate dob) {
-        this(firstName, lastName, dob, "FullTime");
+        //this(firstName, lastName, dob, Student.FULL_TIME);
+        this(firstName, lastName, dob, "bllo");
 //        this.firstName = firstName;
 //        this.lastName = lastName;
 //        this.dob = dob;
