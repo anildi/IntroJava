@@ -31,6 +31,9 @@ getters and setters
     private LocalDate dob;
     private String status;
 
+    private int id;
+
+    private static int nextId = 5;
     /*
     Provide a constructor that takes a first name, last name and
 date of birth as arguments, and another that takes
@@ -43,6 +46,8 @@ think would be useful.
         this.lastName = lastName;
         setDob(dob);
         this.status = status;
+
+        this.id = nextId++;
     }
 
     public Student(String firstName, String lastName, LocalDate dob) {
@@ -53,6 +58,13 @@ think would be useful.
 //        this.status = "FullTime";
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -121,6 +133,6 @@ Create a method called getCurrentInfo that returns the
 formal name and whether the student is active or not.
 */
     public String getCurrentInfo() {
-        return getFormalName() + ", active: " + isActive();
+        return "id: " + id + ", " + getFormalName() + ", active: " + isActive();
     }
 }

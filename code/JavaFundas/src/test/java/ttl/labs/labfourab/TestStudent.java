@@ -63,6 +63,7 @@ public class TestStudent {
 
         String result = student.getCurrentInfo();
 
+        System.out.println("result: " + result);
         assertTrue(result.contains("Joe, Smith"));
     }
 }
