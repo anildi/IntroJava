@@ -10,22 +10,19 @@ public class Student {
     /*
     Create a class called Student. The class should have at least
 the following properties
-●A first name and a last name
-●A date of birth of type LocalDate
+A first name and a last name
+A date of birth of type LocalDate
 more info on LocalDate on the next slide
-●
+
 A status which can be one of
-●
+
 Fulltime
-●
 Parttime
-●
 Hibernating
 
 Make sure you Student class properly encapsulates its
 variables.
 private variables
-●
 getters and setters
      */
 

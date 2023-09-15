@@ -31,7 +31,10 @@ public class TestReferenceArrays {
         String s1 = "hello";
         String s2 = new String("hello");
 
-        if(s1.equals(s2)) {
+        //Do NOT use == for testing object value equality.
+        //Use .equals instead.
+        //if(s1 == s2) {  //BAD.  DO NOT DO THIS.
+        if(s1.equals(s2)) {  //Do this instead.
             System.out.println("Equals");
         } else {
             System.out.println("NOT Equals");
