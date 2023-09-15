@@ -1,10 +1,9 @@
 package ttl.live.packagedemo;
 
-import ttl.labs.labfourab.Student;
 import ttl.live.packagedemo.yourpack.YourClass;
 
-import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * @author whynot
@@ -18,9 +17,12 @@ public class MyImportDemoApp {
 
         System.out.println(mc.doIt("Boo"));
 
-        List<Student> students = new ArrayList<Student>();
+//        List<Student> students = new ArrayList<Student>();
 
-//        List<String> lstr;
+        List<String> lstr;
+
+        java.awt.List list = new java.awt.List();
+
 
     }
 }

@@ -1,12 +1,18 @@
 package ttl.live.shape;
 
 /**
+ * App should allow user to create shapes:
+ *  circles
+ *  rectangles
+ */
+
+/**
  * @author whynot
  */
 public class Shape {
 
-    private final static String defaultColor = "Black";
-    private final static int defaultLineThickness = 1;
+    public final static String defaultColor = "Black";
+    public final static int defaultLineThickness = 1;
 
     private static int count;
 
@@ -20,6 +26,8 @@ public class Shape {
     private int y2;
     private String color = defaultColor;
     private int lineThickness = defaultLineThickness;
+
+   // public Shape() {}
 
     public Shape(int x1, int y1, int x2, int y2) {
         this(x1, y1, x2, y2, defaultColor, defaultLineThickness);
@@ -106,6 +114,7 @@ public class Shape {
     }
 
     public double getArea() {
+        System.out.println("In Shape::getArea");
         int width = this.x2 - this.x1;
         int height = this.y2 - this.y1;
         return width * height;
